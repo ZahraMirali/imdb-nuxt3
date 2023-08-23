@@ -1,5 +1,19 @@
 <template>
   <div>
-    <NuxtWelcome />
+    <button @click="increment">+</button>
+    <p>{{ count }}</p>
+    <button @click="decrement">-</button>
   </div>
 </template>
+
+<script setup>
+  const count = ref(0);
+
+  function increment(){
+    count.value++;
+  }
+
+  function decrement(){
+    count.value--;
+  }
+</script>
