@@ -22,6 +22,10 @@
             body: form
         });
         loading.value = false;
-        console.log(res)
+        if(!res.error.value){
+            const auth = useAuth();
+            auth.value.isAuthenticated = true;
+            navigateTo("/");
+        }
     }
 </script>
