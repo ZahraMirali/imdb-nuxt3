@@ -9,6 +9,12 @@
 <script setup>
     const title = 'My profile page';
     definePageMeta({
-        layout: "sidebar"
+        layout: "sidebar",
+        // middleware: () => { Anonymous middleware
+        //     const auth = useAuth();
+        //     console.log("profile middleware");
+        //     return auth.value.isAuthenticated;
+        // },
+        middleware: ['auth']
     })
 </script>
